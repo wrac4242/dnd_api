@@ -59,3 +59,4 @@ types of notes
 ## proposed changes
 
 + [ ] tags be added to notes?
++ [ ] add session object, predominantly for scheduling
