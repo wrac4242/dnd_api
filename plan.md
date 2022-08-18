@@ -2,7 +2,12 @@
 
 ## API routes
 
-### Important Notes
+### uncategorised
+
+/version  
+    get: gets the current API version
+
+### Notes
 
 /notes  
     get: list all notes  
