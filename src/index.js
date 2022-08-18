@@ -6,7 +6,8 @@ const express = require('express'),
 	bodyParser = require('body-parser');
 
 // mongoose type loading
-const Note = require('./models/notesModel.js');
+const Note = require('./models/notesModel.js'),
+	Tile = require('./models/tilesModel.js');
 
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.DB_URL || "mongodb://127.0.0.1/dnd_db").then(() => {

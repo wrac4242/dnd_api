@@ -43,7 +43,7 @@ If a tile is not returned, then it does not exist
 
 tile object
 
-+ coordinates // tuple of integers (r, q)  
++ coordinates: { r: int, q: int }
 + tile_type // string reference to type  
 + notes // name of note, null if none  
 
