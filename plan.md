@@ -16,7 +16,8 @@
 ### Hex tiles
 
 [Hexagon Information](https://www.redblobgames.com/grids/hexagons/)  
-Hex Coordinates are stored in the "axial coordinate scheme"
+Hex Coordinates are stored in the "axial coordinate scheme"  
+If a tile is not returned, then it does not exist  
 
 /tiles  
     get: list all tiles  
