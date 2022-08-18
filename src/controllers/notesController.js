@@ -13,7 +13,7 @@ var mongoose = require('mongoose'),
 */
 
 exports.list_all_notes = function(req, res) {
-	Note.find({}, "name _id", function (err, note){
+	Note.find({}, function (err, note){
 		if (err) {
 			res.send(err);
 		}

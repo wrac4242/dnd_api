@@ -5,7 +5,7 @@
 ### Important Notes
 
 /notes  
-    get: list all note names and IDs  
+    get: list all notes  
     post: new note  
 
 /notes/:notesId  
