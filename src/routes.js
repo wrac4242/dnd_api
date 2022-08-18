@@ -9,6 +9,10 @@ module.exports = function(app) {
 		res.send("Check Docs for Correct Route");
 	});
 
+	app.get('/version', (req, res) => {
+		res.json(packageJson.version || "Err: version not found");
+	})
+
 	app.route('/notes')
 		.get(notesController.list_all_notes)
 		.post(notesController.create_note);
@@ -20,9 +24,4 @@ module.exports = function(app) {
 		.get(notesController.read_note)
 		.put(notesController.update_note)
 		.delete(notesController.delete_note);
-
-	app.get('/version', (req, res) => {
-		res.json(packageJson.version || "Err: version not found");
-	})
-
 }
