@@ -23,6 +23,11 @@ If a tile is not returned, then it does not exist
     get: list all tiles  
     post: create new tiles at specified coordinates  
 
+/tiles/:CoordinateR/:CoordinateQ
+    get: get tile
+    put: update tile
+    delete: remove tile
+
 ## Object Types
 
 tile object
