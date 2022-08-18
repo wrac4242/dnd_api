@@ -6,11 +6,11 @@
 
 /notes  
     get: list all notes  
-    post: new note  
+    post: new note, send note object  
 
 /notes/:notesId  
     get: get note  
-    put: update note  
+    put: update note, send new note  
     delete: remove note  
 
 ### Hex tiles
@@ -21,11 +21,11 @@ If a tile is not returned, then it does not exist
 
 /tiles  
     get: list all tiles  
-    post: create new tiles at specified coordinates  
+    post: create new tiles at specified coordinates, send tile object  
 
 /tiles/:CoordinateR/:CoordinateQ
     get: get tile
-    put: update tile
+    put: update tile, send new tile object
     delete: remove tile
 
 ## Object Types

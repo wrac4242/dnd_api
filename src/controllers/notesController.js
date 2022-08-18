@@ -23,10 +23,36 @@ exports.list_all_notes = function(req, res) {
 
 exports.create_note = function(req, res) {
 	var new_note = new Note(req.body);
-	new_note.save(function(err, task) {
+	new_note.save(function(err, note) {
 		if (err){
 			res.send(err);
 		}
-		res.json(task);
+		res.json(note);
 	});
 }
+
+exports.read_note = function (req, res) {
+	Note.findById(req.params.noteId, function(err, note) {
+		if (err) {
+			res.send(err);
+		};
+		res.json(note);
+	});
+};
+
+exports.update_note = function(req, res) {
+	Note.findOneAndUpdate({_id: req.params.noteId}, req.body, {new: true}, function(err, note) {
+		if (err)
+			res.send(err);
+		res.json(note);
+	});
+};
+
+
+exports.delete_note = function(req, res) {
+	Note.deleteOne({_id: req.params.noteId}, function(err, note) {
+		if (err)
+			res.send(err);
+		res.json({ message: 'note successfully deleted' });
+	});
+};
