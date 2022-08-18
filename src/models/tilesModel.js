@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 var Types = require("../types.js");
 
 var TilesSchema = new Schema({
-	name: {
+	coordinates: {
 		r: {
 			type: Number, required: true, integer: true,
 			get: v => Math.round(v),
