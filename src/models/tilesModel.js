@@ -14,7 +14,7 @@ var TilesSchema = new Schema({
 			set: v => Math.round(v),
 		}
 	},
-	Tile_type: {
+	tile_type: {
 		type: String,
 		enum: Types.tile_types, 
 		default: Types.tile_types[0]

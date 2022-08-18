@@ -2,7 +2,7 @@
 
 ## API routes
 
-### uncategorised
+### not categorized
 
 /version  
     get: gets the current API version
@@ -28,7 +28,7 @@ Hex Coordinates are stored in the "axial coordinate scheme"
 If a tile is not returned, then it does not exist  
 
 /tiles  
-    get: list all tiles  
+    get: list all tiles in the database
     post: create new tiles at specified coordinates, send tile object  
 
 /tiles/types
