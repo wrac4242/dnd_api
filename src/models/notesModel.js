@@ -1,14 +1,14 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-var notesController = require("../controllers/nodesController.js");
+var Types = require("../types.js");
 
 var NoteSchema = new Schema({
-	name: {type: String, required: true},
+	name: {type: String, required: true, unique: true},
 	note_type: {type: [{
 			type: String,
-			enum: notesController.note_types
+			enum: Types.note_types
 		}], 
-		default: notesController.note_types[0]
+		default: Types.note_types[0]
 	},
 	note_content: {type: String, default: ""}
 });

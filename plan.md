@@ -5,8 +5,8 @@
 ### Important Notes
 
 /notes  
-    get: list all notes  
-    post: new notes, returns notesId  
+    get: list all note names and IDs  
+    post: new note  
 
 /notes/:notesId  
     get: get note  
@@ -49,7 +49,7 @@ types of tile
 
 Note
 
-+ name
++ name // must be unique
 + note_type // string reference to type
 + note_content
 
