@@ -34,7 +34,7 @@ If a tile is not returned, then it does not exist
 /tiles/types
     get: list all tile types
 
-/tiles/:CoordinateR/:CoordinateQ
+/tiles/:tileId
     get: get tile
     put: update tile, send new tile object
     delete: remove tile
