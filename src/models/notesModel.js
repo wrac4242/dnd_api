@@ -10,7 +10,7 @@ var NoteSchema = new Schema({
 		}], 
 		default: Types.note_types[0]
 	},
-	note_content: {type: String, default: ""}
+	content: {type: String, required: true}
 });
 
 module.exports = mongoose.model("Notes", NoteSchema);

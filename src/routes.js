@@ -9,5 +9,6 @@ module.exports = function(app) {
 	});
 
 	app.route('/notes')
-		.get(notesController.list_all_notes);
+		.get(notesController.list_all_notes)
+		.post(notesController.create_note);
 }

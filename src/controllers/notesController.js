@@ -20,3 +20,13 @@ exports.list_all_notes = function(req, res) {
 		res.json(note);
 	});
 };
+
+exports.create_note = function(req, res) {
+	var new_note = new Note(req.body);
+	new_note.save(function(err, task) {
+		if (err){
+			res.send(err);
+		}
+		res.json(task);
+	});
+}

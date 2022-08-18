@@ -34,7 +34,7 @@ tile object
 
 + coordinates // tuple of integers (r, q)  
 + tile_type // string reference to type  
-+ notes  
++ notes // name of note, null if none  
 
 types of tile
 
@@ -51,7 +51,7 @@ Note
 
 + name // must be unique
 + note_type // string reference to type
-+ note_content
++ content
 
 types of notes
 
