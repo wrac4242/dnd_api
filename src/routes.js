@@ -11,9 +11,13 @@ module.exports = function(app) {
 	app.route('/notes')
 		.get(notesController.list_all_notes)
 		.post(notesController.create_note);
-	
+		
+	app.route('/notes/types')
+		.get(notesController.get_types);
+		
 	app.route('/notes/:noteId')
 		.get(notesController.read_note)
 		.put(notesController.update_note)
 		.delete(notesController.delete_note);
+
 }
