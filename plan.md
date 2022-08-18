@@ -33,33 +33,32 @@ If a tile is not returned, then it does not exist
 tile object
 
 + coordinates // tuple of integers (r, q)  
-+ type of tile // string reference to type  
++ tile_type // string reference to type  
 + notes  
 
 types of tile
 
-+ settlement // specifics in notes  
-+ plain  
-+ desert  
-+ mountain  
-+ water  
-+ not_generated  
++ "Settlement" // specifics in notes  
++ "Plain"  
++ "Desert"  
++ "Mountain"  
++ "Water"  
++ "None" // also the not generated type  
 
 ### notes
 
 Note
 
-+ Name
-+ Type of note // string reference to type
-+ NoteId
-+ note content
++ name
++ note_type // string reference to type
++ note_content
 
 types of notes
 
-+ general notes
-+ NPC
-+ Town
-+ Weapon
++ "General_note"
++ "NPC"
++ "Town"
++ "Weapon"
 
 ## proposed changes
 
