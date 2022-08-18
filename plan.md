@@ -28,7 +28,6 @@ If a tile is not returned, then it does not exist
 tile object
 
 + coordinates // tuple of integers (r, q)  
-+ CoordinateId  
 + type of tile // string reference to type  
 + notes  
 
