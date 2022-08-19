@@ -1,4 +1,3 @@
-const express = require('express');
 const packageJson = require("../package.json");
 
 // route generation and creation

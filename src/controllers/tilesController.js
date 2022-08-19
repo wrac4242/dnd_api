@@ -23,9 +23,8 @@ exports.create_tile = function(req, res) {
 
 exports.read_tile = function (req, res) {
 	Tile.findById(req.params.tileId, function(err, tile) {
-		if (err) {
+		if (err) 
 			res.send(err);
-		};
 		res.json(tile);
 	});
 };
@@ -40,7 +39,7 @@ exports.update_tile = function(req, res) {
 
 
 exports.delete_tile = function(req, res) {
-	Tile.deleteOne({_id: req.params.tileId}, function(err, tile) {
+	Tile.deleteOne({_id: req.params.tileId}, function(err) {
 		if (err)
 			res.send(err);
 		res.json({ message: 'tile successfully deleted' });

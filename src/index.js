@@ -1,13 +1,13 @@
-const express = require('express'),
-	app = express(),
-	port = process.env.PORT || 3000;
-	mongoose = require('mongoose'),
-	routes_creator = require("./routes.js"),
-	bodyParser = require('body-parser');
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
+const mongoose = require('mongoose');
+const routes_creator = require("./routes.js");
+const bodyParser = require('body-parser');
 
 // mongoose type loading
-const Note = require('./models/notesModel.js'),
-	Tile = require('./models/tilesModel.js');
+require('./models/notesModel.js');
+require('./models/tilesModel.js'); 
 
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.DB_URL || "mongodb://127.0.0.1/dnd_db").then(() => {

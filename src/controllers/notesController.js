@@ -23,9 +23,8 @@ exports.create_note = function(req, res) {
 
 exports.read_note = function (req, res) {
 	Note.findById(req.params.noteId, function(err, note) {
-		if (err) {
+		if (err) 
 			res.send(err);
-		};
 		res.json(note);
 	});
 };
@@ -40,7 +39,7 @@ exports.update_note = function(req, res) {
 
 
 exports.delete_note = function(req, res) {
-	Note.deleteOne({_id: req.params.noteId}, function(err, note) {
+	Note.deleteOne({_id: req.params.noteId}, function(err) {
 		if (err)
 			res.send(err);
 		res.json({ message: 'note successfully deleted' });
