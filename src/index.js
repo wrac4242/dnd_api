@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const routes_creator = require("./routes.js");
 const bodyParser = require('body-parser');
 const compression = require('compression');
+const helmet = require('helmet');
 
 // mongoose type loading
 require('./models/notesModel.js');
@@ -21,6 +22,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use(compression()); //Compress all routes
+app.use(helmet()); //Basic security checks
 
 routes_creator(app);
 
