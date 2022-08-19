@@ -36,7 +36,7 @@ exports.update_note = function (req, res) {
         function (err, note) {
             if (err) res.send(err);
             res.json(note);
-        }
+        },
     );
 };
 

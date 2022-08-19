@@ -36,7 +36,7 @@ exports.update_tile = function (req, res) {
         function (err, tile) {
             if (err) res.send(err);
             res.json(tile);
-        }
+        },
     );
 };
 
