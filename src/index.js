@@ -4,6 +4,7 @@ const port = process.env.PORT || 3000;
 const mongoose = require('mongoose');
 const routes_creator = require("./routes.js");
 const bodyParser = require('body-parser');
+const compression = require('compression');
 
 // mongoose type loading
 require('./models/notesModel.js');
@@ -18,6 +19,8 @@ mongoose.connect(process.env.DB_URL || "mongodb://127.0.0.1/dnd_db").then(() => 
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+app.use(compression()); //Compress all routes
 
 routes_creator(app);
 
