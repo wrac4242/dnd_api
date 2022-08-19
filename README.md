@@ -9,4 +9,4 @@
 
 ### Notes
 
-The code requires an instance of MongoDB to be running  
+The code requires an instance of MongoDB to be running
