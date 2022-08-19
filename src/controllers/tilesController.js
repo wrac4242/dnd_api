@@ -1,5 +1,5 @@
-var mongoose = require('mongoose'),
-Tile = mongoose.model('Tiles');
+var mongoose = require('mongoose');
+var Tile = mongoose.model('Tiles');
 var Types = require("../types.js");
 
 exports.list_all_tiles = function(req, res) {

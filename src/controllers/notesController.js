@@ -1,5 +1,5 @@
-var mongoose = require('mongoose'),
-	Note = mongoose.model('Notes');
+var mongoose = require('mongoose');
+var Note = mongoose.model('Notes');
 var Types = require("../types.js");
 
 exports.list_all_notes = function(req, res) {
