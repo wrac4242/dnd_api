@@ -24,6 +24,19 @@ app.use(bodyParser.json());
 app.use(compression()); //Compress all routes
 app.use(helmet()); //Basic security checks
 
+app.disable('x-powered-by'); // disable basic fingerprinting
+
+// custom 404
+app.use((req, res) => {
+	res.status(404).send("Not Found");
+})
+
+  // custom error handler
+app.use((err, req, res) => {
+	console.error(err.stack);
+	res.status(500).send('Something broke!');
+})
+
 routes_creator(app);
 
 app.listen(port, () => {
