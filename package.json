@@ -1,23 +1,32 @@
 {
-  "name": "dnd_wildlands_api",
-  "version": "0.1.0",
-  "description": "An API to help manage a DND campaign",
-  "main": "src/index.js",
-  "scripts": {
-    "start": "node src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "npx eslint \"src/**\""
-  },
-  "author": "Wrac4242",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.20.0",
-    "compression": "^1.7.4",
-    "express": "^4.18.1",
-    "helmet": "^5.1.1",
-    "mongoose": "^6.5.2"
-  },
-  "devDependencies": {
-    "eslint": "^8.22.0"
-  }
+    "name": "dnd_wildlands_api",
+    "version": "0.1.0",
+    "description": "An API to help manage a DND campaign",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "node src/index.js",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "npx eslint \"src/**\"",
+        "prepare": "husky install",
+        "prettier": "npx prettier --write ."
+    },
+    "author": "Wrac4242",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.20.0",
+        "compression": "^1.7.4",
+        "express": "^4.18.1",
+        "helmet": "^5.1.1",
+        "mongoose": "^6.5.2"
+    },
+    "devDependencies": {
+        "eslint": "^8.22.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "husky": "^8.0.1",
+        "lint-staged": "^13.0.3"
+    },
+    "lint-staged": {
+        "*.js": "eslint --cache --fix"
+    }
 }
